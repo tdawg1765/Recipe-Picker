@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import Images from "../components/Images";
+import Accordian from '../components/Accordian'
 import axios from "axios";
 
 const Home = () => {
@@ -12,7 +13,7 @@ const Home = () => {
     async function getMeals() {
       try {
         const res = await axios.get(baseURL);
-        //console.log(res.data.meals);
+        // console.log(res);
         setMeals(res.data.meals);
       } catch (error) {
         console.log(error);
@@ -20,6 +21,7 @@ const Home = () => {
     }
     getMeals();
   };
+
 
   return (
     <div style={{ textAlign: "center" }}>
@@ -38,7 +40,13 @@ const Home = () => {
         )}
       </div>
       <div>
+        <p>{meals.map((meal) => meal.strInstructions)}</p>
+      </div>
+      <div>
         <Images data={meals}></Images>
+      </div>
+      <div>
+        <Accordian data={meals}/>
       </div>
     </div>
   );
