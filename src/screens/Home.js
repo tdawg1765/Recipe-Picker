@@ -49,6 +49,7 @@ const Home = () => {
       </div>
       yeet
       skeet
+      freak
     </div>
   );
 };
