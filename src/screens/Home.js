@@ -48,6 +48,7 @@ const Home = () => {
         <Accordian data={meals} />
       </div>
       yeet
+      skeet
     </div>
   );
 };
