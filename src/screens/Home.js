@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import Images from "../components/Images";
-import Accordian from '../components/Accordian'
+import Accordian from "../components/Accordian";
 import axios from "axios";
 
 const Home = () => {
@@ -21,7 +21,6 @@ const Home = () => {
     }
     getMeals();
   };
-
 
   return (
     <div style={{ textAlign: "center" }}>
@@ -46,12 +45,11 @@ const Home = () => {
         <Images data={meals}></Images>
       </div>
       <div>
-        <Accordian data={meals}/>
+        <Accordian data={meals} />
       </div>
+      yeet
     </div>
   );
 };
 
 export default Home;
-
-
